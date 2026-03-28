@@ -1,0 +1,3250 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Branden Waters — Entrepreneur, Realtor, Investor, Tech Founder</title>
+<meta name="description" content="Branden Waters — entrepreneur, realtor, investor, and tech founder based in northeast Florida's lake region. Real estate, AI automation, waterway data, and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+/* ===== CSS CUSTOM PROPERTIES ===== */
+:root {
+  /* Brand Colors */
+  --color-black: #0D0F0E;
+  --color-offwhite: #F4F0E8;
+  --color-gold: #C9A84C;
+
+  /* Venture Accents */
+  --color-purple: #7B5CF0;
+  --color-green: #2D9E6B;
+  --color-amber: #D97706;
+  --color-teal: #0D9488;
+  --color-coral: #E05C3A;
+
+  /* Fonts */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+  --space-2xl: 8rem;
+
+  /* Transitions */
+  --ease-cinematic: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.4s var(--ease-cinematic);
+  --transition-slow: 0.8s var(--ease-cinematic);
+}
+
+/* ===== DARK THEME (default) ===== */
+[data-theme="dark"] {
+  --bg-primary: #0D0F0E;
+  --bg-secondary: #141716;
+  --bg-card: #1A1D1C;
+  --bg-card-hover: #222625;
+  --text-primary: #F4F0E8;
+  --text-secondary: #A8A49C;
+  --text-muted: #6B6862;
+  --border-color: rgba(244, 240, 232, 0.08);
+  --border-color-hover: rgba(244, 240, 232, 0.15);
+  --overlay-gradient: linear-gradient(to top, rgba(13,15,14,0.95) 0%, rgba(13,15,14,0.6) 40%, transparent 100%);
+  --grain-opacity: 0.04;
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.3);
+  --shadow-card-hover: 0 12px 40px rgba(0,0,0,0.5);
+}
+
+/* ===== LIGHT THEME ===== */
+[data-theme="light"] {
+  --bg-primary: #F4F0E8;
+  --bg-secondary: #EDE8DD;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #FAF8F4;
+  --text-primary: #0D0F0E;
+  --text-secondary: #4A4740;
+  --text-muted: #8A8680;
+  --border-color: rgba(13, 15, 14, 0.1);
+  --border-color-hover: rgba(13, 15, 14, 0.2);
+  --overlay-gradient: linear-gradient(to top, rgba(244,240,232,0.95) 0%, rgba(244,240,232,0.5) 40%, transparent 100%);
+  --grain-opacity: 0.025;
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.08);
+  --shadow-card-hover: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ===== GRAIN OVERLAY (global texture) ===== */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: var(--grain-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.container--narrow {
+  max-width: 960px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ===== WATERCOLOR DIVIDER ===== */
+.watercolor-divider {
+  width: 100%;
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0.3;
+}
+
+.watercolor-divider::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  left: -10%;
+  background: radial-gradient(ellipse at 20% 50%, var(--color-teal) 0%, transparent 50%),
+              radial-gradient(ellipse at 50% 50%, var(--color-gold) 0%, transparent 45%),
+              radial-gradient(ellipse at 80% 50%, var(--color-green) 0%, transparent 50%);
+  filter: blur(30px);
+  opacity: 0.4;
+}
+
+/* ===== SCROLL REVEAL ANIMATION ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px) scale(0.98);
+  transition: opacity 0.8s var(--ease-cinematic), transform 0.8s var(--ease-cinematic);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ===== LISTING PHOTO PLACEHOLDER ===== */
+.listing-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2a3a2e 0%, #1a2a1e 30%, #1e2e28 60%, #152015 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.listing-photo-placeholder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 60% 30%, rgba(201,168,76,0.15) 0%, transparent 60%),
+              radial-gradient(ellipse at 20% 70%, rgba(45,158,107,0.1) 0%, transparent 50%);
+}
+
+.listing-photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+  transition: all var(--transition-base);
+  cursor: pointer;
+  border: none;
+}
+
+.btn--primary {
+  background: var(--color-green);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: #34b07a;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(45,158,107,0.3);
+}
+
+.btn--gold {
+  background: var(--color-gold);
+  color: var(--color-black);
+}
+
+.btn--gold:hover {
+  background: #d4b35a;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(201,168,76,0.3);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color-hover);
+}
+
+.btn--ghost:hover {
+  border-color: var(--text-primary);
+  background: rgba(244,240,232,0.05);
+}
+
+.btn--outline-green {
+  background: transparent;
+  color: var(--color-green);
+  border: 1px solid var(--color-green);
+}
+
+.btn--outline-green:hover {
+  background: var(--color-green);
+  color: #fff;
+}
+
+/* ===== NAVIGATION / TOP BAR ===== */
+.site-nav {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.25rem var(--space-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background var(--transition-base), box-shadow var(--transition-base);
+}
+
+.site-nav.scrolled {
+  background: rgba(13,15,14,0.92);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 var(--border-color);
+}
+
+[data-theme="light"] .site-nav.scrolled {
+  background: rgba(244,240,232,0.92);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.nav-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.nav-brand-sub {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-green);
+  opacity: 0.8;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  transition: color var(--transition-base);
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  color: var(--text-primary);
+}
+
+.theme-toggle {
+  width: 36px; height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  transition: all var(--transition-base);
+  border: 1px solid var(--border-color);
+  background: transparent;
+}
+
+.theme-toggle:hover {
+  color: var(--text-primary);
+  border-color: var(--border-color-hover);
+}
+
+.theme-toggle svg {
+  width: 18px; height: 18px;
+}
+
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.mobile-menu-btn span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+/* ===== SECTION 1: FEATURED LISTINGS HERO CAROUSEL ===== */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s var(--ease-cinematic);
+  pointer-events: none;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.carousel-slide .slide-photo {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.carousel-slide .slide-photo .listing-photo-placeholder {
+  transition: transform 12s linear;
+}
+
+.carousel-slide.active .slide-photo .listing-photo-placeholder {
+  transform: scale(1.08);
+}
+
+.carousel-slide .slide-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13,15,14,0.95) 0%, rgba(13,15,14,0.5) 35%, rgba(13,15,14,0.1) 60%, rgba(13,15,14,0.2) 100%);
+  z-index: 1;
+}
+
+[data-theme="light"] .carousel-slide .slide-gradient {
+  background: linear-gradient(to top, rgba(13,15,14,0.85) 0%, rgba(13,15,14,0.35) 35%, transparent 60%, rgba(13,15,14,0.1) 100%);
+}
+
+.carousel-content {
+  position: absolute;
+  bottom: 6rem;
+  left: var(--space-md);
+  z-index: 2;
+  max-width: 700px;
+}
+
+.listing-badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--color-green);
+  border-radius: 2px;
+  margin-bottom: var(--space-sm);
+}
+
+.carousel-address {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: #F4F0E8;
+  margin-bottom: 0.5rem;
+}
+
+.carousel-tagline {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: rgba(244,240,232,0.7);
+  margin-bottom: var(--space-sm);
+  letter-spacing: 0.02em;
+}
+
+.carousel-price {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 600;
+  color: var(--color-green);
+  margin-bottom: 1.5rem;
+}
+
+.carousel-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: var(--color-green);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.carousel-cta:hover {
+  background: #34b07a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(45,158,107,0.35);
+}
+
+/* Top-right branding */
+.carousel-branding {
+  position: absolute;
+  top: 5rem;
+  right: var(--space-md);
+  z-index: 3;
+  text-align: right;
+}
+
+.carousel-branding-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(244,240,232,0.9);
+  letter-spacing: 0.03em;
+}
+
+.carousel-branding-sub {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-green);
+  opacity: 0.8;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.carousel-arrow {
+  width: 44px; height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(244,240,232,0.25);
+  border-radius: 50%;
+  color: rgba(244,240,232,0.8);
+  background: rgba(13,15,14,0.3);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.carousel-arrow:hover {
+  border-color: rgba(244,240,232,0.6);
+  color: #F4F0E8;
+  background: rgba(13,15,14,0.6);
+}
+
+.carousel-arrow svg {
+  width: 18px; height: 18px;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(244,240,232,0.3);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  padding: 0;
+}
+
+.carousel-dot.active {
+  background: var(--color-green);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* Progress bar */
+.carousel-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(244,240,232,0.08);
+  z-index: 3;
+}
+
+.carousel-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--color-green);
+  transition: width 6s linear;
+}
+
+.carousel-progress-bar.animating {
+  width: 100%;
+}
+
+/* Scroll down hint */
+.scroll-hint {
+  position: absolute;
+  bottom: 5rem;
+  right: var(--space-md);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(244,240,232,0.5);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  animation: scrollHintPulse 2.5s ease-in-out infinite;
+}
+
+.scroll-hint-arrow {
+  width: 20px; height: 20px;
+  animation: scrollArrow 2.5s ease-in-out infinite;
+}
+
+@keyframes scrollHintPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes scrollArrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* ===== SECTION 2: MINI LISTING GRID ===== */
+.listings-grid-section {
+  padding: var(--space-xl) 0;
+  background: var(--bg-primary);
+}
+
+.listings-grid-header {
+  margin-bottom: var(--space-lg);
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.listing-card {
+  background: var(--bg-card);
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  position: relative;
+}
+
+.listing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--border-color-hover);
+}
+
+.listing-card-photo {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  overflow: hidden;
+}
+
+.listing-card-photo .listing-photo-placeholder {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.6s var(--ease-cinematic);
+}
+
+.listing-card:hover .listing-card-photo .listing-photo-placeholder {
+  transform: scale(1.05);
+}
+
+.listing-card-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 2px;
+  z-index: 1;
+}
+
+.listing-card-body {
+  padding: 1.25rem;
+}
+
+.listing-card-address {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+  line-height: 1.2;
+}
+
+.listing-card-stats {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.listing-card-price {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-green);
+}
+
+.listing-card-hover-cta {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-green);
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all var(--transition-base);
+}
+
+.listing-card-hover-cta::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-green);
+  transition: width var(--transition-base);
+}
+
+.listing-card:hover .listing-card-hover-cta {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.listing-card:hover .listing-card-hover-cta::after {
+  width: 100%;
+}
+
+.listings-grid-footer {
+  text-align: center;
+}
+
+/* ===== SECTION 3: BRAND INTRODUCTION ===== */
+.brand-intro {
+  padding: var(--space-xl) 0;
+  overflow: hidden;
+}
+
+.brand-intro-inner {
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.brand-intro-photo {
+  position: relative;
+  height: 600px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.brand-intro-photo .listing-photo-placeholder {
+  background: linear-gradient(135deg, #1e2e28 0%, #2a3a34 50%, #1a2a20 100%);
+}
+
+.brand-intro-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 60px rgba(0,0,0,0.3);
+  border-radius: 6px;
+}
+
+.brand-intro-content {
+  padding: var(--space-md) 0;
+}
+
+.brand-intro-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.brand-intro-tagline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: var(--space-md);
+}
+
+.brand-intro-tagline span {
+  transition: opacity 0.3s ease;
+}
+
+.brand-intro-bio {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+  max-width: 540px;
+}
+
+.stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.stat-item {
+  text-align: left;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.brand-intro-ctas {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+/* ===== SECTION 4: FIVE VENTURE CARDS ===== */
+.ventures-section {
+  padding: var(--space-xl) 0;
+  background: var(--bg-secondary);
+}
+
+.ventures-scroll {
+  display: flex;
+  gap: var(--space-md);
+  overflow-x: auto;
+  padding: var(--space-sm) 0 var(--space-md);
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color-hover) transparent;
+}
+
+.ventures-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.ventures-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ventures-scroll::-webkit-scrollbar-thumb {
+  background: var(--border-color-hover);
+  border-radius: 2px;
+}
+
+.venture-card {
+  min-width: 280px;
+  max-width: 300px;
+  flex-shrink: 0;
+  background: var(--bg-card);
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  scroll-snap-align: start;
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.venture-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.venture-card-accent {
+  height: 6px;
+  width: 100%;
+}
+
+.venture-card-body {
+  padding: 1.75rem 1.5rem;
+}
+
+.venture-card-icon {
+  width: 44px; height: 44px;
+  margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.venture-card-icon svg {
+  width: 24px; height: 24px;
+}
+
+.venture-card-name {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.venture-card-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+  line-height: 1.6;
+}
+
+.venture-card-features {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.venture-card-features li {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  padding: 0.3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.venture-card-features li::before {
+  content: '';
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.venture-card .venture-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 1px solid;
+  transition: all var(--transition-base);
+  color: inherit;
+  background: transparent;
+}
+
+.venture-card .venture-btn:hover {
+  color: #fff;
+}
+
+/* ===== SECTION 5: TESTIMONIALS ===== */
+.testimonials-section {
+  padding: var(--space-xl) 0;
+}
+
+.testimonials-masonry {
+  column-count: 3;
+  column-gap: var(--space-md);
+}
+
+.testimonial-card {
+  break-inside: avoid;
+  margin-bottom: var(--space-md);
+  background: var(--bg-card);
+  border-radius: 6px;
+  padding: 1.75rem;
+  border: 1px solid var(--border-color);
+  border-left: 3px solid;
+  transition: all var(--transition-base);
+}
+
+.testimonial-card:hover {
+  box-shadow: var(--shadow-card);
+}
+
+.testimonial-quote {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.65;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.testimonial-quote::before {
+  content: '\201C';
+  font-size: 2rem;
+  line-height: 0;
+  vertical-align: -0.35em;
+  margin-right: 0.1em;
+  opacity: 0.3;
+}
+
+.testimonial-author {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.testimonial-role {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.testimonial-venture {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+/* ===== SECTION 6: VISITOR ROUTING ===== */
+.routing-section {
+  padding: var(--space-xl) 0;
+  background: var(--bg-secondary);
+}
+
+.routing-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-sm);
+}
+
+.routing-card {
+  position: relative;
+  padding: 2rem 1.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+}
+
+.routing-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  transition: opacity var(--transition-base);
+  border-radius: 6px;
+}
+
+.routing-card:hover::before {
+  opacity: 0.15;
+}
+
+.routing-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-color-hover);
+}
+
+.routing-card-question {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: auto;
+  line-height: 1.3;
+  position: relative;
+  z-index: 1;
+}
+
+.routing-card-arrow {
+  font-size: 1.5rem;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all var(--transition-base);
+  position: relative;
+  z-index: 1;
+  margin-top: var(--space-sm);
+}
+
+.routing-card:hover .routing-card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.routing-card-venture {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== SECTION 7: CONTACT FORM ===== */
+.contact-section {
+  padding: var(--space-xl) 0;
+}
+
+.contact-inner {
+  display: grid;
+  grid-template-columns: 0.38fr 0.62fr;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.contact-info {
+  position: sticky;
+  top: 100px;
+}
+
+.contact-photo {
+  width: 100%;
+  height: 280px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: var(--space-md);
+}
+
+.contact-photo .listing-photo-placeholder {
+  background: linear-gradient(135deg, #1e2e28 0%, #2a3a34 50%, #1a2a20 100%);
+}
+
+.contact-name {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.contact-role {
+  font-size: 0.8rem;
+  color: var(--color-green);
+  margin-bottom: var(--space-sm);
+}
+
+.contact-details {
+  list-style: none;
+  margin-bottom: var(--space-sm);
+}
+
+.contact-details li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding: 0.4rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-details li svg {
+  width: 16px; height: 16px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.contact-license {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--border-color);
+}
+
+.contact-form {
+  background: var(--bg-card);
+  border-radius: 6px;
+  padding: 2.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.contact-form-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-sub {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.form-group {
+  margin-bottom: var(--space-sm);
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: border-color var(--transition-base);
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--color-gold);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B6862' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+}
+
+.form-submit {
+  margin-top: var(--space-sm);
+}
+
+/* ===== SECTION 8: FOOTER ===== */
+.site-footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: var(--space-lg) 0 var(--space-md);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.footer-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.footer-brand-tagline {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+  line-height: 1.5;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footer-social-link {
+  width: 36px; height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  transition: all var(--transition-base);
+}
+
+.footer-social-link:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+.footer-social-link svg {
+  width: 16px; height: 16px;
+}
+
+.footer-col-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.footer-col-links {
+  list-style: none;
+}
+
+.footer-col-links li {
+  margin-bottom: 0.4rem;
+}
+
+.footer-col-links a {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-base);
+}
+
+.footer-col-links a:hover {
+  color: var(--text-primary);
+}
+
+.footer-license {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+.footer-bottom {
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.footer-copyright {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.footer-bottom-links a {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  transition: color var(--transition-base);
+}
+
+.footer-bottom-links a:hover {
+  color: var(--text-primary);
+}
+
+/* ===== LISTING DETAIL PAGE (full-page takeover) ===== */
+.listing-detail {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: var(--bg-primary);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.listing-detail.active {
+  display: block;
+}
+
+.listing-detail-back {
+  position: fixed;
+  top: 1.25rem;
+  left: var(--space-md);
+  z-index: 2001;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(244,240,232,0.9);
+  background: rgba(13,15,14,0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(244,240,232,0.1);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.listing-detail-back:hover {
+  background: rgba(13,15,14,0.8);
+  border-color: rgba(244,240,232,0.25);
+}
+
+/* Detail Hero */
+.detail-hero {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.detail-hero .listing-photo-placeholder {
+  position: absolute;
+  inset: 0;
+}
+
+.detail-hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13,15,14,0.9) 0%, rgba(13,15,14,0.3) 40%, rgba(13,15,14,0.1) 70%, rgba(13,15,14,0.2) 100%);
+  z-index: 1;
+}
+
+.detail-hero-content {
+  position: absolute;
+  bottom: 3rem;
+  left: var(--space-md);
+  right: var(--space-md);
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.detail-hero-address {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 400;
+  color: #F4F0E8;
+  line-height: 1.1;
+}
+
+.detail-hero-city {
+  font-size: 1rem;
+  color: rgba(244,240,232,0.6);
+  margin-top: 0.35rem;
+}
+
+.detail-hero-price {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 600;
+  color: var(--color-green);
+  text-align: right;
+}
+
+.detail-hero-pills {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.detail-pill {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(244,240,232,0.85);
+  background: rgba(244,240,232,0.1);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  border: 1px solid rgba(244,240,232,0.1);
+}
+
+.detail-scroll-indicator {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(244,240,232,0.4);
+  animation: scrollHintPulse 2.5s ease-in-out infinite;
+}
+
+/* Photo Gallery */
+.detail-gallery {
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+}
+
+.detail-gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.detail-gallery-thumb {
+  aspect-ratio: 16/10;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all var(--transition-base);
+}
+
+.detail-gallery-thumb:hover,
+.detail-gallery-thumb.active {
+  border-color: var(--color-green);
+}
+
+.detail-gallery-thumb .listing-photo-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+/* Key Details Strip */
+.detail-key-strip {
+  padding: 1.5rem var(--space-md);
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.detail-key-strip-inner {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.detail-key-item {
+  text-align: center;
+}
+
+.detail-key-value {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.detail-key-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+/* Detail Content */
+.detail-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-lg);
+}
+
+.detail-main h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.detail-main p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: var(--space-sm);
+}
+
+.detail-features {
+  margin: var(--space-md) 0;
+}
+
+.detail-features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.detail-feature-col h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.detail-feature-col ul {
+  list-style: none;
+}
+
+.detail-feature-col li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding: 0.35rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.detail-feature-col li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--color-green);
+}
+
+.detail-map-placeholder {
+  width: 100%;
+  height: 300px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: var(--space-md);
+}
+
+/* Detail Sidebar */
+.detail-sidebar {
+  position: sticky;
+  top: var(--space-md);
+}
+
+.agent-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1.75rem;
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+.agent-card-photo {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto var(--space-sm);
+}
+
+.agent-card-photo .listing-photo-placeholder {
+  background: linear-gradient(135deg, #1e2e28, #2a3a34);
+}
+
+.agent-card-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.agent-card-brokerage {
+  font-size: 0.75rem;
+  color: var(--color-green);
+  margin-bottom: 0.75rem;
+}
+
+.agent-card-contact {
+  list-style: none;
+}
+
+.agent-card-contact li {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  padding: 0.3rem 0;
+}
+
+.showing-form {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1.75rem;
+  margin-bottom: var(--space-md);
+}
+
+.showing-form h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.showing-form .form-group {
+  margin-bottom: 0.75rem;
+}
+
+.showing-form .form-group label {
+  font-size: 0.7rem;
+}
+
+.showing-form .form-group input,
+.showing-form .form-group textarea {
+  padding: 0.6rem 0.85rem;
+  font-size: 0.85rem;
+}
+
+.showing-form textarea {
+  min-height: 80px;
+}
+
+.detail-mls-disclaimer {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: var(--space-sm);
+}
+
+.detail-share {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.detail-share-btn {
+  width: 36px; height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  background: transparent;
+}
+
+.detail-share-btn:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+.detail-share-btn svg {
+  width: 16px; height: 16px;
+}
+
+/* Similar Listings */
+.detail-similar {
+  padding: var(--space-lg) var(--space-md);
+  background: var(--bg-secondary);
+}
+
+.detail-similar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.detail-similar h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.detail-similar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+/* ===== MOBILE NAV OVERLAY ===== */
+.mobile-nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(13,15,14,0.95);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.mobile-nav-overlay.active {
+  display: flex;
+}
+
+.mobile-nav-overlay a {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  transition: color var(--transition-base);
+}
+
+.mobile-nav-overlay a:hover {
+  color: var(--color-green);
+}
+
+.mobile-nav-close {
+  position: absolute;
+  top: 1.25rem;
+  right: var(--space-md);
+  width: 40px; height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .listings-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brand-intro-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .brand-intro-photo {
+    height: 400px;
+  }
+
+  .routing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    position: static;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-md);
+    align-items: start;
+  }
+
+  .contact-photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .detail-content {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+
+  .testimonials-masonry {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .listings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .routing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .carousel-content {
+    bottom: 5rem;
+    padding-right: var(--space-md);
+  }
+
+  .carousel-address {
+    font-size: 1.8rem;
+  }
+
+  .carousel-branding {
+    top: 4.5rem;
+  }
+
+  .scroll-hint {
+    display: none;
+  }
+
+  .stats-row {
+    gap: var(--space-sm);
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .testimonials-masonry {
+    column-count: 1;
+  }
+
+  .detail-hero {
+    height: 60vh;
+  }
+
+  .detail-hero-content {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .detail-hero-price {
+    text-align: left;
+  }
+
+  .detail-hero-pills {
+    display: none;
+  }
+
+  .detail-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .detail-key-strip-inner {
+    gap: var(--space-md);
+  }
+
+  .detail-features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-similar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-photo {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .routing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-intro-name {
+    font-size: 2.5rem;
+  }
+}
+</style>
+</head>
+
+<body>
+<!-- ===== MAIN SITE WRAPPER ===== -->
+<div id="mainSite">
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="site-nav" id="siteNav">
+  <div class="nav-brand">
+    <div>
+      <div class="nav-brand-name">Branden Waters</div>
+      <div class="nav-brand-sub">Trevor Waters Realty</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#listings">Listings</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#ventures">Ventures</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <!-- Sun icon (shown in dark mode) -->
+        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <!-- Moon icon (shown in light mode) -->
+        <svg class="icon-moon" style="display:none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </li>
+  </ul>
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Nav Overlay -->
+<div class="mobile-nav-overlay" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+  <a href="#listings" onclick="closeMobileNav()">Listings</a>
+  <a href="#about" onclick="closeMobileNav()">About</a>
+  <a href="#ventures" onclick="closeMobileNav()">Ventures</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+  <button class="theme-toggle" onclick="toggleTheme(); closeMobileNav();" aria-label="Toggle theme">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+  </button>
+</div>
+
+<!-- ===== SECTION 1: HERO CAROUSEL ===== -->
+<section class="hero-carousel" id="heroCarousel">
+  <div class="carousel-slides" id="carouselSlides">
+    <!-- Slides injected by JS -->
+  </div>
+
+  <div class="carousel-branding">
+    <div class="carousel-branding-name">Branden Waters</div>
+    <div class="carousel-branding-sub">Trevor Waters Realty</div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Explore all listings</span>
+    <svg class="scroll-hint-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+
+  <div class="carousel-controls" id="carouselControls">
+    <button class="carousel-arrow" id="carouselPrev" aria-label="Previous listing">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="carousel-dots" id="carouselDots">
+      <!-- Dots injected by JS -->
+    </div>
+    <button class="carousel-arrow" id="carouselNext" aria-label="Next listing">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+
+  <div class="carousel-progress">
+    <div class="carousel-progress-bar" id="carouselProgressBar"></div>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: MINI LISTING GRID ===== -->
+<section class="listings-grid-section" id="listings">
+  <div class="container">
+    <div class="listings-grid-header reveal">
+      <div class="section-title">Active Listings</div>
+      <div class="section-subtitle">Northeast Florida &middot; Lake Region &middot; Jacksonville &middot; Rural Land</div>
+    </div>
+
+    <div class="listings-grid" id="listingsGrid">
+      <!-- Listing cards injected by JS -->
+    </div>
+
+    <div class="listings-grid-footer reveal">
+      <button class="btn btn--outline-green">View All Properties &rarr;</button>
+    </div>
+  </div>
+</section>
+
+<div class="watercolor-divider"></div>
+
+<!-- ===== SECTION 3: BRAND INTRODUCTION ===== -->
+<section class="brand-intro" id="about">
+  <div class="container">
+    <div class="brand-intro-inner">
+      <div class="brand-intro-photo reveal">
+        <div class="listing-photo-placeholder">
+          <!-- Replace with: <img src="branden-editorial.jpg" alt="Branden Waters — entrepreneur and realtor in northeast Florida"> -->
+        </div>
+      </div>
+      <div class="brand-intro-content reveal">
+        <div class="brand-intro-name">Branden Waters</div>
+        <div class="brand-intro-tagline">
+          <span style="color: var(--color-purple)">Tech builder.</span>
+          <span style="color: var(--color-green)">Realtor.</span>
+          <span style="color: var(--color-amber)">Investor.</span>
+          <span style="color: var(--color-teal)">Data founder.</span>
+        </div>
+        <p class="brand-intro-bio">
+          Based in the northeast Florida lake region, I build businesses that solve real problems. From AI-powered automation and real estate to waterway data platforms and permit processing, every venture I run is designed to create value, move fast, and serve people who are doing real things. If you're buying lakefront property, need a cash offer on a home, automating your business, or navigating building permits, I'm the person who built the tool or the team to help you.
+        </p>
+
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-number" style="color: var(--color-purple)">50+</div>
+            <div class="stat-label">Businesses Automated</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" style="color: var(--color-green)">120+</div>
+            <div class="stat-label">Homes Sold</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" style="color: var(--color-amber)">200+</div>
+            <div class="stat-label">Cash Offers Made</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" style="color: var(--color-teal)">85</div>
+            <div class="stat-label">Lakes Documented</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" style="color: var(--color-coral)">1,500+</div>
+            <div class="stat-label">Plans Processed</div>
+          </div>
+        </div>
+
+        <div class="brand-intro-ctas">
+          <a href="#contact" class="btn btn--primary">Work With Me</a>
+          <a href="#ventures" class="btn btn--ghost">Explore My Ventures</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="watercolor-divider"></div>
+
+<!-- ===== SECTION 4: FIVE VENTURE CARDS ===== -->
+<section class="ventures-section" id="ventures">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">The Ventures</div>
+      <div class="section-title" style="margin-bottom: var(--space-md);">Five businesses. One mission.</div>
+    </div>
+    <div class="ventures-scroll" id="venturesScroll">
+      <!-- Venture cards injected by JS -->
+    </div>
+  </div>
+</section>
+
+<div class="watercolor-divider"></div>
+
+<!-- ===== SECTION 5: TESTIMONIALS ===== -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="reveal" style="margin-bottom: var(--space-lg);">
+      <div class="section-label">What People Say</div>
+      <div class="section-title">Trust built across every venture</div>
+    </div>
+    <div class="testimonials-masonry" id="testimonialsMasonry">
+      <!-- Testimonial cards injected by JS -->
+    </div>
+  </div>
+</section>
+
+<div class="watercolor-divider"></div>
+
+<!-- ===== SECTION 6: VISITOR ROUTING ===== -->
+<section class="routing-section">
+  <div class="container">
+    <div class="reveal" style="margin-bottom: var(--space-lg);">
+      <div class="section-label">How Can I Help?</div>
+      <div class="section-title">What brings you here?</div>
+    </div>
+    <div class="routing-grid" id="routingGrid">
+      <!-- Routing cards injected by JS -->
+    </div>
+  </div>
+</section>
+
+<div class="watercolor-divider"></div>
+
+<!-- ===== SECTION 7: CONTACT FORM ===== -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-info reveal">
+        <div class="contact-photo">
+          <div class="listing-photo-placeholder">
+            <!-- Replace with: <img src="branden-contact.jpg" alt="Branden Waters"> -->
+          </div>
+        </div>
+        <div>
+          <div class="contact-name" id="contactName">Branden Waters</div>
+          <div class="contact-role">Entrepreneur &middot; Realtor &middot; Investor</div>
+          <ul class="contact-details">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span id="contactPhone">(352) 555-0199</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span id="contactEmail">branden@brandenwaters.com</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Melrose, FL 32666</span>
+            </li>
+          </ul>
+          <div class="contact-license" id="contactLicense">
+            FL RE License # PLACEHOLDER — Trevor Waters Realty
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form reveal">
+        <div class="contact-form-title">Let's talk</div>
+        <div class="contact-form-sub">Whether it's real estate, automation, or something else entirely — I'd love to hear from you.</div>
+        <form id="contactForm" onsubmit="handleContactSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="formName">Name *</label>
+              <input type="text" id="formName" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="formEmail">Email *</label>
+              <input type="email" id="formEmail" name="email" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="formPhone">Phone</label>
+              <input type="tel" id="formPhone" name="phone">
+            </div>
+            <div class="form-group">
+              <label for="formSubject">I need help with&hellip;</label>
+              <select id="formSubject" name="subject">
+                <option value="">Select one</option>
+                <option value="ai-automation">AI &amp; Automation</option>
+                <option value="buying-selling">Buying or Selling</option>
+                <option value="cash-offer">Cash Offer</option>
+                <option value="lake-info">Lake Region Info</option>
+                <option value="building-plans">Building Plans</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="formMessage">Tell me more</label>
+            <textarea id="formMessage" name="message" placeholder="What can I help you with?"></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn--gold" style="width:100%; justify-content:center;">Send Message &rarr;</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 8: FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Branden Waters</div>
+        <p class="footer-brand-tagline">Entrepreneur, realtor, investor, and tech founder based in northeast Florida's lake region.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="footer-social-link" aria-label="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title" style="color: var(--color-purple)">ihelpbuild</div>
+        <ul class="footer-col-links">
+          <li><a href="#">AI Automation</a></li>
+          <li><a href="#">Website Design</a></li>
+          <li><a href="#">CRM Setup</a></li>
+          <li><a href="#">Marketing</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title" style="color: var(--color-green)">Trevor Waters Realty</div>
+        <ul class="footer-col-links">
+          <li><a href="#">Active Listings</a></li>
+          <li><a href="#">Lake Homes</a></li>
+          <li><a href="#">Rural Land</a></li>
+          <li><a href="#">Buyer Resources</a></li>
+        </ul>
+        <div class="footer-license" id="footerLicense">FL RE License # PLACEHOLDER</div>
+      </div>
+      <div>
+        <div class="footer-col-title" style="color: var(--color-amber)">Golden Dog Properties</div>
+        <ul class="footer-col-links">
+          <li><a href="#">Get a Cash Offer</a></li>
+          <li><a href="#">How It Works</a></li>
+        </ul>
+        <div class="footer-col-title" style="color: var(--color-teal); margin-top: 1.25rem;">WaterwayInfo.com</div>
+        <ul class="footer-col-links">
+          <li><a href="#">Lake Directory</a></li>
+          <li><a href="#">Community Info</a></li>
+        </ul>
+        <div class="footer-col-title" style="color: var(--color-coral); margin-top: 1.25rem;">PermitPass.ai</div>
+        <ul class="footer-col-links">
+          <li><a href="#">AI Plan Review</a></li>
+          <li><a href="#">For Contractors</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-col-links">
+          <li><a href="tel:+13525550199" id="footerPhone">(352) 555-0199</a></li>
+          <li><a href="mailto:branden@brandenwaters.com" id="footerEmail">branden@brandenwaters.com</a></li>
+          <li><a href="#">Melrose, FL 32666</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copyright">&copy; 2026 Branden Waters &middot; All rights reserved</div>
+      <div class="footer-bottom-links">
+        <a href="#">WaterwayInfo.com</a>
+        <a href="#">PermitPass.ai</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- end #mainSite -->
+
+<!-- ===== LISTING DETAIL PAGE (full-page takeover) ===== -->
+<div class="listing-detail" id="listingDetail">
+  <button class="listing-detail-back" id="detailBack">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    Back to Branden Waters
+  </button>
+
+  <div id="detailContent">
+    <!-- Listing detail content injected by JS -->
+  </div>
+</div>
+
+<script>
+// ===== SITE CONFIGURATION =====
+const SITE_CONFIG = {
+  ownerName: 'Branden Waters',
+  tagline: 'Tech builder. Realtor. Investor. Data founder.',
+  reLicense: 'FL RE License # PLACEHOLDER',
+  phone: '(352) 555-0199',
+  email: 'branden@brandenwaters.com',
+  location: 'Melrose, FL 32666',
+  socialLinks: {
+    facebook: '#',
+    instagram: '#',
+    linkedin: '#',
+    youtube: '#'
+  },
+  brandColors: {
+    purple: '#7B5CF0',
+    green: '#2D9E6B',
+    amber: '#D97706',
+    teal: '#0D9488',
+    coral: '#E05C3A',
+    gold: '#C9A84C',
+    black: '#0D0F0E',
+    offwhite: '#F4F0E8'
+  },
+
+  // ===== FEATURED CAROUSEL LISTINGS =====
+  featuredListings: [
+    {
+      id: 'listing-001',
+      address: '124 Lakefront Drive',
+      city: 'Melrose, FL 32666',
+      tagline: '4BR \u00b7 3BA \u00b7 2,400 sqft \u00b7 Private dock on Lake Santa Fe',
+      price: '$485,000',
+      badge: 'FEATURED LISTING',
+      photo: 'placeholder',
+      beds: 4, baths: 3, sqft: 2400, lotSize: '0.85 acres', yearBuilt: 2004, garage: 2, waterfront: 'Yes',
+      highlight: 'Deepwater dock, sunset views, fully renovated kitchen',
+      description: 'Welcome to lakefront living at its finest. This beautifully renovated 4-bedroom home sits on nearly an acre of mature, oak-shaded land with direct access to Lake Santa Fe. A private deepwater dock invites you to fish, kayak, or simply watch the sunset paint the water gold every evening. Inside, the chef\'s kitchen features quartz countertops, soft-close cabinetry, and a gas range. The open floor plan flows seamlessly to a screened lanai overlooking the lake. The primary suite offers lake views, a walk-in closet, and a spa-inspired bathroom.',
+      features: {
+        interior: ['Renovated chef\'s kitchen with quartz counters', 'Open floor plan with lake views', 'Primary suite with spa bath', 'Luxury vinyl plank throughout'],
+        exterior: ['Screened lanai overlooking lake', 'Deepwater private dock', 'Mature oak canopy', 'New roof (2022)'],
+        lot: ['0.85 acres, gently sloping to water', 'No HOA', 'County water + well irrigation', 'Fenced backyard'],
+        water: ['Direct Lake Santa Fe access', 'Private deepwater dock', 'Sandy lake bottom at shoreline', 'Bass, bream, and catfish']
+      },
+      neighborhood: 'Melrose is a hidden gem of northeast Florida — a tight-knit lakeside community surrounded by pristine waterways, rolling hills, and old Florida charm. Minutes from Keystone Heights and a short drive to Gainesville or St. Augustine, it offers the rare combination of rural peace and easy access to urban amenities.'
+    },
+    {
+      id: 'listing-002',
+      address: '8901 Lakeshore Boulevard',
+      city: 'Keystone Heights, FL 32656',
+      tagline: '3BR \u00b7 2BA \u00b7 1,850 sqft \u00b7 Lake Geneva waterfront',
+      price: '$365,000',
+      badge: 'JUST LISTED',
+      photo: 'placeholder',
+      beds: 3, baths: 2, sqft: 1850, lotSize: '0.5 acres', yearBuilt: 1998, garage: 2, waterfront: 'Yes',
+      highlight: 'Panoramic lake views, updated baths, dock with boat lift',
+      description: 'Stunning Lake Geneva waterfront property with panoramic views from nearly every room. This well-maintained 3-bedroom home features an updated kitchen, remodeled bathrooms, and a spacious Florida room that captures the lake breeze. The lot slopes gently to the water with a private dock and boat lift — perfect for weekend fishing or sunset cruises. The location is ideal: minutes from downtown Keystone Heights with easy access to Gainesville and Jacksonville.',
+      features: {
+        interior: ['Updated kitchen with granite', 'Remodeled bathrooms', 'Spacious Florida room', 'Tile and hardwood floors'],
+        exterior: ['Private dock with boat lift', 'Covered patio', 'Detached workshop/shed', 'Irrigation system'],
+        lot: ['0.5 acres waterfront', 'Gentle slope to water', 'Mature landscaping', 'Circular driveway'],
+        water: ['Lake Geneva direct access', 'Dock with boat lift', 'Clear spring-fed water', 'Great fishing lake']
+      },
+      neighborhood: 'Keystone Heights sits at the heart of Florida\'s lake region, surrounded by clear, spring-fed lakes and the Gold Head Branch State Park. The charming downtown features local shops and restaurants, while outdoor recreation abounds year-round.'
+    },
+    {
+      id: 'listing-003',
+      address: '456 Sandhill Lane',
+      city: 'Melrose, FL 32666',
+      tagline: '5BR \u00b7 4BA \u00b7 3,200 sqft \u00b7 10 acres with pond',
+      price: '$625,000',
+      badge: 'PRICE REDUCED',
+      photo: 'placeholder',
+      beds: 5, baths: 4, sqft: 3200, lotSize: '10 acres', yearBuilt: 2012, garage: 3, waterfront: 'Pond',
+      highlight: '10 private acres, stocked pond, horse-ready, metal roof',
+      description: 'Estate-style living on 10 private acres in the heart of Melrose. This impressive 5-bedroom, 4-bath home offers over 3,200 square feet of thoughtfully designed living space. The property features a stocked pond, fenced pastures ready for horses, and a 3-car garage with workshop space. Inside, soaring ceilings, a stone fireplace, and a gourmet kitchen with double ovens anchor the open-concept main living area. The primary wing is a true retreat with a sitting area, dual vanities, and a soaking tub.',
+      features: {
+        interior: ['Soaring ceilings, stone fireplace', 'Gourmet kitchen with double ovens', 'Primary wing with sitting area', '3-car attached garage'],
+        exterior: ['Metal roof (50-year warranty)', 'Covered wraparound porch', 'Stocked pond', 'Fenced pastures'],
+        lot: ['10 acres, partially wooded', 'Horse-ready with fencing', 'Private well + septic', 'Paved road access'],
+        water: ['Private stocked pond', 'Well water with filtration', 'Pond stocked with bass/bream', 'Drainage easement']
+      },
+      neighborhood: 'This estate enjoys the best of rural Florida living while remaining connected. Melrose\'s quaint downtown, with its monthly art walks and local eateries, is just minutes away. Gainesville, Palatka, and St. Augustine are all within easy driving distance.'
+    },
+    {
+      id: 'listing-004',
+      address: '77 Moss Creek Trail',
+      city: 'Hawthorne, FL 32640',
+      tagline: '3BR \u00b7 2BA \u00b7 1,600 sqft \u00b7 Newnans Lake access',
+      price: '$289,000',
+      badge: 'FEATURED LISTING',
+      photo: 'placeholder',
+      beds: 3, baths: 2, sqft: 1600, lotSize: '0.75 acres', yearBuilt: 2006, garage: 1, waterfront: 'Community access',
+      highlight: 'Turnkey, move-in ready, community boat ramp, Hawthorne Trail access',
+      description: 'Move-in ready and priced to sell, this charming 3-bedroom home in Hawthorne offers the perfect gateway to lakeside living. The home sits on three-quarters of an acre with mature trees providing shade and privacy. A bright, open kitchen with breakfast bar opens to the living area. The community boat ramp provides direct access to Newnans Lake, one of Alachua County\'s premier fishing destinations. Ride your bike from the backyard to the Hawthorne Trail, a 16-mile paved path that leads to downtown Gainesville.',
+      features: {
+        interior: ['Open kitchen with breakfast bar', 'Split floor plan', 'Inside laundry room', 'Walk-in closets'],
+        exterior: ['Covered front porch', 'Large backyard', 'Mature shade trees', 'Storage shed'],
+        lot: ['0.75 acres', 'Level and cleared', 'County water available', 'Near Hawthorne Trail'],
+        water: ['Community boat ramp to Newnans Lake', 'Lake is 7,000+ acres', 'Renowned bass fishing', 'Kayak and canoe friendly']
+      },
+      neighborhood: 'Hawthorne is a small, friendly community on the eastern edge of Alachua County. It\'s the trailhead for the famous Hawthorne Trail, offering easy access to Gainesville while maintaining its own quiet, rural character.'
+    }
+  ],
+
+  // ===== GRID LISTINGS (separate from carousel) =====
+  gridListings: [
+    {
+      id: 'listing-005',
+      address: '2200 County Road 21B',
+      city: 'Keystone Heights, FL 32656',
+      tagline: '2BR \u00b7 1BA \u00b7 1,100 sqft \u00b7 Fixer on 5 acres',
+      price: '$159,000',
+      badge: 'INVESTMENT',
+      badgeColor: '#D97706',
+      photo: 'placeholder',
+      beds: 2, baths: 1, sqft: 1100, lotSize: '5 acres', yearBuilt: 1975, garage: 0, waterfront: 'No',
+      highlight: 'Investor special — 5 acres, solid bones, huge upside',
+      description: 'Investor\'s dream on 5 unrestricted acres in Clay County. This 2-bedroom fixer-upper has solid bones — block construction, metal roof, and a newer septic. The land alone is worth the asking price, with ample room for expansion, a workshop, or additional structures. Located on a paved county road with easy access to Keystone Heights and SR-100.',
+      features: {
+        interior: ['Block construction', 'Functional kitchen', 'Original hardwood under carpet', 'Window AC units'],
+        exterior: ['Metal roof', 'Covered carport', 'Well with pump house', 'Newer septic (2019)'],
+        lot: ['5 unrestricted acres', 'Partially cleared', 'Paved road frontage', 'Zoned agricultural'],
+        water: ['Private well', 'No waterfront', 'Drainage ditch on property', 'No flood zone']
+      },
+      neighborhood: 'Located in unincorporated Clay County between Keystone Heights and Melrose. This area is popular with investors and homesteaders who value privacy and land without HOA restrictions.'
+    },
+    {
+      id: 'listing-006',
+      address: '1050 Lake View Circle',
+      city: 'Interlachen, FL 32148',
+      tagline: 'Vacant Land \u00b7 2.5 acres \u00b7 Lake access community',
+      price: '$45,000',
+      badge: 'LAND',
+      badgeColor: '#0D9488',
+      photo: 'placeholder',
+      beds: 0, baths: 0, sqft: 0, lotSize: '2.5 acres', yearBuilt: null, garage: 0, waterfront: 'Community access',
+      highlight: 'Build your dream home — 2.5 wooded acres, lake access',
+      description: 'Build your dream home on 2.5 beautiful wooded acres in a quiet lake-access community near Interlachen. The lot is gently rolling with a mix of hardwoods and pines, offering natural privacy and beauty. Community boat ramp provides access to one of Putnam County\'s scenic lakes. Power is at the road; the lot is perced and ready for a septic system.',
+      features: {
+        interior: ['Vacant land — build to suit'],
+        exterior: ['Mix of hardwoods and pines', 'Natural privacy', 'Power at road', 'Perced for septic'],
+        lot: ['2.5 acres', 'Gently rolling terrain', 'Community boat ramp access', 'No HOA'],
+        water: ['Community lake access', 'Lake ideal for kayaking/fishing', 'No dock rights', 'Peaceful setting']
+      },
+      neighborhood: 'Interlachen is a small Putnam County community known for its many surrounding lakes and quiet, rural lifestyle. It\'s an affordable alternative to more developed areas, with Palatka and Gainesville within driving distance.'
+    },
+    {
+      id: 'listing-007',
+      address: '330 SE 55th Street',
+      city: 'Keystone Heights, FL 32656',
+      tagline: '4BR \u00b7 2BA \u00b7 2,100 sqft \u00b7 Lake Brooklyn views',
+      price: '$410,000',
+      badge: 'WATERFRONT',
+      badgeColor: '#2D9E6B',
+      photo: 'placeholder',
+      beds: 4, baths: 2, sqft: 2100, lotSize: '0.6 acres', yearBuilt: 2010, garage: 2, waterfront: 'Yes',
+      highlight: 'Lake Brooklyn waterfront, screened pool, updated throughout',
+      description: 'Gorgeous Lake Brooklyn waterfront home with a screened pool and sweeping water views. This 4-bedroom, 2-bath home has been tastefully updated with a modern kitchen, luxury bathrooms, and impact-rated windows throughout. The screened pool and lanai area overlook the lake, creating the perfect indoor-outdoor living experience. A private path leads down to the water\'s edge with a shared dock area.',
+      features: {
+        interior: ['Modern updated kitchen', 'Luxury bathrooms', 'Impact-rated windows', 'Open floor plan'],
+        exterior: ['Screened pool', 'Covered lanai with lake views', 'Shared dock area', 'Lush landscaping'],
+        lot: ['0.6 acres waterfront', 'Mature trees and palms', 'Sprinkler system', 'Paved driveway'],
+        water: ['Lake Brooklyn waterfront', 'Spring-fed, crystal clear', 'Shared dock', 'Swimming and fishing']
+      },
+      neighborhood: 'Lake Brooklyn is one of the crown jewels of Keystone Heights\' chain of lakes — spring-fed, crystal clear, and ideal for swimming, fishing, and kayaking. The area around it is well-maintained and established, with a strong sense of community.'
+    }
+  ],
+
+  // ===== VENTURES =====
+  ventures: [
+    {
+      name: 'ihelpbuild',
+      color: '#7B5CF0',
+      description: 'AI-powered automation, websites, CRM, software, and marketing for small businesses ready to scale.',
+      features: ['AI workflow automation', 'Custom websites & apps', 'CRM setup & integration'],
+      icon: 'code'
+    },
+    {
+      name: 'Trevor Waters Realty',
+      color: '#2D9E6B',
+      description: 'Full-service real estate for buyers and sellers across northeast Florida\'s lake region and beyond.',
+      features: ['Lake & waterfront homes', 'Rural land & acreage', 'NE Florida specialist'],
+      icon: 'home'
+    },
+    {
+      name: 'Golden Dog Properties',
+      color: '#D97706',
+      description: 'Fast, fair cash offers on homes in any condition. Close on your timeline, no repairs needed.',
+      features: ['Cash offers in 24 hours', 'Close in as few as 7 days', 'Any condition, any situation'],
+      icon: 'dollar'
+    },
+    {
+      name: 'WaterwayInfo.com',
+      color: '#0D9488',
+      description: 'Comprehensive lake data, waterway maps, and community info for Florida\'s lake region.',
+      features: ['Lake depth & water data', 'Interactive waterway maps', 'Community guides & info'],
+      icon: 'water'
+    },
+    {
+      name: 'PermitPass.ai',
+      color: '#E05C3A',
+      description: 'AI-powered building plan review and permit processing for contractors, architects, and owners.',
+      features: ['AI plan review engine', 'Automated permit processing', 'Contractor & architect tools'],
+      icon: 'blueprint'
+    }
+  ],
+
+  // ===== TESTIMONIALS =====
+  // REPLACE WITH REAL TESTIMONIALS
+  testimonials: [
+    {
+      quote: 'ihelpbuild completely transformed our business operations. We went from manual everything to fully automated in under a month. Our revenue doubled within the quarter.',
+      author: 'Sarah Mitchell',
+      role: 'Owner, Mitchell\'s Landscaping',
+      venture: 'ihelpbuild',
+      color: '#7B5CF0'
+    },
+    {
+      quote: 'Branden found us the perfect lakefront home in Melrose. He knew every lake, every street, every detail about the area. We couldn\'t have done it without him.',
+      author: 'David & Karen Foster',
+      role: 'Homebuyers, Lake Santa Fe',
+      venture: 'Trevor Waters Realty',
+      color: '#2D9E6B'
+    },
+    {
+      quote: 'We needed to sell fast after a family emergency. Golden Dog gave us a fair cash offer within hours and closed in 10 days. No stress, no hassle, just done.',
+      author: 'Maria Gonzalez',
+      role: 'Home Seller, Palatka',
+      venture: 'Golden Dog Properties',
+      color: '#D97706'
+    },
+    {
+      quote: 'WaterwayInfo.com was the reason we chose Keystone Heights. The lake data, the community info, the maps — it gave us everything we needed to make the move.',
+      author: 'Tom & Linda Park',
+      role: 'Relocated from Atlanta',
+      venture: 'WaterwayInfo.com',
+      color: '#0D9488'
+    },
+    {
+      quote: 'PermitPass cut our plan review time from weeks to days. As a contractor running multiple projects, that kind of speed is a game-changer.',
+      author: 'James Thornton',
+      role: 'Licensed General Contractor',
+      venture: 'PermitPass.ai',
+      color: '#E05C3A'
+    }
+  ],
+
+  // ===== ROUTING SCENARIOS =====
+  routing: [
+    { question: 'Grow your business?', venture: 'ihelpbuild', color: '#7B5CF0' },
+    { question: 'Buying or selling in NE Florida?', venture: 'Trevor Waters Realty', color: '#2D9E6B' },
+    { question: 'Need a cash offer fast?', venture: 'Golden Dog Properties', color: '#D97706' },
+    { question: 'Exploring the lake region?', venture: 'WaterwayInfo.com', color: '#0D9488' },
+    { question: 'Building permit help?', venture: 'PermitPass.ai', color: '#E05C3A' }
+  ]
+};
+
+// ===== HELPER: Get all listings =====
+function getAllListings() {
+  return [...SITE_CONFIG.featuredListings, ...SITE_CONFIG.gridListings];
+}
+
+function getListingById(id) {
+  return getAllListings().find(l => l.id === id);
+}
+
+// ===== VENTURE ICON SVGs =====
+function getVentureIcon(type, color) {
+  const icons = {
+    code: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
+    home: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+    dollar: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`,
+    water: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2-2.67 4-4 6-4s4 1.33 6 4 4 4 6 4 4-1.33 6-4"/><path d="M2 18c2-2.67 4-4 6-4s4 1.33 6 4 4 4 6 4 4-1.33 6-4"/><path d="M2 6c2-2.67 4-4 6-4s4 1.33 6 4 4 4 6 4 4-1.33 6-4"/></svg>`,
+    blueprint: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>`
+  };
+  return icons[type] || icons.code;
+}
+
+// ===== RENDER: CAROUSEL =====
+function renderCarousel() {
+  const slidesContainer = document.getElementById('carouselSlides');
+  const dotsContainer = document.getElementById('carouselDots');
+
+  SITE_CONFIG.featuredListings.forEach((listing, i) => {
+    // Slide
+    const slide = document.createElement('div');
+    slide.className = 'carousel-slide' + (i === 0 ? ' active' : '');
+    slide.innerHTML = `
+      <div class="slide-photo">
+        <div class="listing-photo-placeholder" style="background: linear-gradient(${135 + i*30}deg, #${(0x1a2a1e + i*0x111111).toString(16).slice(0,6)} 0%, #${(0x2a3a2e + i*0x080808).toString(16).slice(0,6)} 50%, #${(0x152015 + i*0x0a0a0a).toString(16).slice(0,6)} 100%);">
+          <!-- Replace with: <img src="${listing.photo}" alt="${listing.address}, ${listing.city}" data-src="${listing.photo}"> -->
+        </div>
+      </div>
+      <div class="slide-gradient"></div>
+      <div class="carousel-content">
+        <span class="listing-badge">${listing.badge}</span>
+        <div class="carousel-address">${listing.address}</div>
+        <div class="carousel-tagline">${listing.tagline}</div>
+        <div class="carousel-price">${listing.price}</div>
+        <button class="carousel-cta" onclick="openListingDetail('${listing.id}')">View This Property &rarr;</button>
+      </div>
+    `;
+    slidesContainer.appendChild(slide);
+
+    // Dot
+    const dot = document.createElement('button');
+    dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', `Go to listing ${i + 1}`);
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  });
+}
+
+// ===== CAROUSEL ENGINE =====
+let currentSlide = 0;
+let carouselInterval = null;
+let carouselPaused = false;
+
+function goToSlide(index) {
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.carousel-dot');
+  const progressBar = document.getElementById('carouselProgressBar');
+
+  slides[currentSlide].classList.remove('active');
+  dots[currentSlide].classList.remove('active');
+
+  // Reset Ken Burns
+  const prevPhoto = slides[currentSlide].querySelector('.listing-photo-placeholder');
+  prevPhoto.style.transition = 'none';
+  prevPhoto.style.transform = 'scale(1)';
+
+  currentSlide = index;
+
+  slides[currentSlide].classList.add('active');
+  dots[currentSlide].classList.add('active');
+
+  // Trigger Ken Burns on new slide
+  const newPhoto = slides[currentSlide].querySelector('.listing-photo-placeholder');
+  requestAnimationFrame(() => {
+    newPhoto.style.transition = 'transform 12s linear';
+    newPhoto.style.transform = 'scale(1.08)';
+  });
+
+  // Reset progress bar
+  progressBar.classList.remove('animating');
+  progressBar.style.width = '0%';
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      progressBar.classList.add('animating');
+    });
+  });
+
+  resetCarouselTimer();
+}
+
+function nextSlide() {
+  const total = SITE_CONFIG.featuredListings.length;
+  goToSlide((currentSlide + 1) % total);
+}
+
+function prevSlide() {
+  const total = SITE_CONFIG.featuredListings.length;
+  goToSlide((currentSlide - 1 + total) % total);
+}
+
+function resetCarouselTimer() {
+  if (carouselInterval) clearInterval(carouselInterval);
+  if (!carouselPaused) {
+    carouselInterval = setInterval(nextSlide, 6000);
+  }
+}
+
+function initCarousel() {
+  renderCarousel();
+
+  document.getElementById('carouselNext').addEventListener('click', nextSlide);
+  document.getElementById('carouselPrev').addEventListener('click', prevSlide);
+
+  // Pause on hover
+  const heroEl = document.getElementById('heroCarousel');
+  heroEl.addEventListener('mouseenter', () => {
+    carouselPaused = true;
+    if (carouselInterval) clearInterval(carouselInterval);
+  });
+  heroEl.addEventListener('mouseleave', () => {
+    carouselPaused = false;
+    resetCarouselTimer();
+  });
+
+  // Start progress bar + auto-advance
+  const progressBar = document.getElementById('carouselProgressBar');
+  requestAnimationFrame(() => {
+    progressBar.classList.add('animating');
+  });
+  carouselInterval = setInterval(nextSlide, 6000);
+}
+
+// ===== RENDER: LISTING GRID =====
+function renderListingGrid() {
+  const grid = document.getElementById('listingsGrid');
+
+  SITE_CONFIG.gridListings.forEach(listing => {
+    const card = document.createElement('div');
+    card.className = 'listing-card reveal';
+    card.onclick = () => openListingDetail(listing.id);
+    card.innerHTML = `
+      <div class="listing-card-photo">
+        <div class="listing-photo-placeholder">
+          <!-- Replace with: <img src="${listing.photo}" alt="${listing.address}"> -->
+        </div>
+        <span class="listing-card-badge" style="background: ${listing.badgeColor || 'var(--color-green)'}">${listing.badge}</span>
+      </div>
+      <div class="listing-card-body">
+        <div class="listing-card-address">${listing.address}</div>
+        <div class="listing-card-stats">${listing.beds ? listing.beds + 'BR \u00b7 ' + listing.baths + 'BA \u00b7 ' + listing.sqft.toLocaleString() + ' sqft' : listing.lotSize}</div>
+        <div class="listing-card-price">${listing.price}</div>
+      </div>
+      <span class="listing-card-hover-cta">View Details &rarr;</span>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+// ===== RENDER: VENTURE CARDS =====
+function renderVentures() {
+  const scroll = document.getElementById('venturesScroll');
+
+  SITE_CONFIG.ventures.forEach(v => {
+    const card = document.createElement('div');
+    card.className = 'venture-card reveal';
+    card.innerHTML = `
+      <div class="venture-card-accent" style="background: ${v.color}"></div>
+      <div class="venture-card-body">
+        <div class="venture-card-icon" style="background: ${v.color}15;">
+          ${getVentureIcon(v.icon, v.color)}
+        </div>
+        <div class="venture-card-name">${v.name}</div>
+        <div class="venture-card-desc">${v.description}</div>
+        <ul class="venture-card-features">
+          ${v.features.map(f => `<li><span style="display:inline-block;width:4px;height:4px;border-radius:50%;background:${v.color};flex-shrink:0;"></span> ${f}</li>`).join('')}
+        </ul>
+        <button class="venture-btn" style="border-color: ${v.color}; color: ${v.color};" onmouseover="this.style.background='${v.color}';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='${v.color}'">
+          Learn More &rarr;
+        </button>
+      </div>
+    `;
+    scroll.appendChild(card);
+  });
+}
+
+// ===== RENDER: TESTIMONIALS =====
+function renderTestimonials() {
+  const container = document.getElementById('testimonialsMasonry');
+
+  SITE_CONFIG.testimonials.forEach(t => {
+    const card = document.createElement('div');
+    card.className = 'testimonial-card reveal';
+    card.style.borderLeftColor = t.color;
+    card.innerHTML = `
+      <div class="testimonial-quote">${t.quote}</div>
+      <div class="testimonial-author">${t.author}</div>
+      <div class="testimonial-role">${t.role}</div>
+      <div class="testimonial-venture" style="color: ${t.color}">${t.venture}</div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+// ===== RENDER: ROUTING =====
+function renderRouting() {
+  const grid = document.getElementById('routingGrid');
+
+  SITE_CONFIG.routing.forEach(r => {
+    const card = document.createElement('div');
+    card.className = 'routing-card reveal';
+    card.innerHTML = `
+      <div class="routing-card-question">${r.question}</div>
+      <div class="routing-card-arrow" style="color: ${r.color}">&rarr;</div>
+      <div class="routing-card-venture" style="color: ${r.color}">${r.venture}</div>
+    `;
+    card.style.setProperty('--routing-color', r.color);
+    card.querySelector('.routing-card-question').style.transition = 'color var(--transition-base)';
+    card.addEventListener('mouseenter', () => {
+      card.querySelector('.routing-card-question').style.color = r.color;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.querySelector('.routing-card-question').style.color = '';
+    });
+
+    // Background tint
+    const before = document.createElement('div');
+    before.style.cssText = `position:absolute;inset:0;background:${r.color};opacity:0.05;transition:opacity 0.4s ease;border-radius:6px;pointer-events:none;`;
+    card.appendChild(before);
+    card.addEventListener('mouseenter', () => before.style.opacity = '0.15');
+    card.addEventListener('mouseleave', () => before.style.opacity = '0.05');
+
+    grid.appendChild(card);
+  });
+}
+
+// ===== LISTING DETAIL PAGE =====
+function openListingDetail(listingId) {
+  const listing = getListingById(listingId);
+  if (!listing) return;
+
+  const detail = document.getElementById('listingDetail');
+  const content = document.getElementById('detailContent');
+  const mainSite = document.getElementById('mainSite');
+
+  // Get similar listings (exclude current)
+  const allListings = getAllListings().filter(l => l.id !== listingId);
+  const similar = allListings.slice(0, 3);
+
+  content.innerHTML = `
+    <!-- Detail Hero -->
+    <div class="detail-hero">
+      <div class="listing-photo-placeholder" id="detailHeroPhoto">
+        <!-- Replace with: <img src="${listing.photo}" alt="${listing.address}"> -->
+      </div>
+      <div class="detail-hero-gradient"></div>
+      <div class="detail-hero-content">
+        <div>
+          <div class="detail-hero-address">${listing.address}</div>
+          <div class="detail-hero-city">${listing.city}</div>
+        </div>
+        <div class="detail-hero-price">${listing.price}</div>
+      </div>
+      ${listing.beds ? `
+      <div class="detail-hero-pills">
+        <span class="detail-pill">${listing.beds} Beds</span>
+        <span class="detail-pill">${listing.baths} Baths</span>
+        <span class="detail-pill">${listing.sqft.toLocaleString()} sqft</span>
+      </div>` : ''}
+      <div class="detail-scroll-indicator">Scroll to explore &darr;</div>
+    </div>
+
+    <!-- Photo Gallery -->
+    <div class="detail-gallery">
+      <div class="detail-gallery-grid">
+        ${[1,2,3,4,5,6].map((n, i) => `
+          <div class="detail-gallery-thumb ${i === 0 ? 'active' : ''}" onclick="selectDetailPhoto(this, ${i})">
+            <div class="listing-photo-placeholder" style="background: linear-gradient(${120 + i*25}deg, #${(0x1e2820 + i*0x080808).toString(16).slice(0,6)}, #${(0x2a3530 + i*0x050505).toString(16).slice(0,6)});">
+              <!-- Replace with: <img src="listing-photo-${n}.jpg" alt="${listing.address} photo ${n}"> -->
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <!-- Key Details Strip -->
+    <div class="detail-key-strip">
+      <div class="detail-key-strip-inner">
+        ${listing.beds ? `<div class="detail-key-item"><div class="detail-key-value">${listing.beds}</div><div class="detail-key-label">Bedrooms</div></div>` : ''}
+        ${listing.baths ? `<div class="detail-key-item"><div class="detail-key-value">${listing.baths}</div><div class="detail-key-label">Bathrooms</div></div>` : ''}
+        ${listing.sqft ? `<div class="detail-key-item"><div class="detail-key-value">${listing.sqft.toLocaleString()}</div><div class="detail-key-label">Sq Ft</div></div>` : ''}
+        <div class="detail-key-item"><div class="detail-key-value">${listing.lotSize}</div><div class="detail-key-label">Lot Size</div></div>
+        ${listing.yearBuilt ? `<div class="detail-key-item"><div class="detail-key-value">${listing.yearBuilt}</div><div class="detail-key-label">Year Built</div></div>` : ''}
+        <div class="detail-key-item"><div class="detail-key-value">${listing.garage}</div><div class="detail-key-label">Garage</div></div>
+        <div class="detail-key-item"><div class="detail-key-value">${listing.waterfront}</div><div class="detail-key-label">Waterfront</div></div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="detail-content">
+      <div class="detail-main">
+        <h2>About This Property</h2>
+        <p>${listing.description || 'Property description coming soon.'}</p>
+
+        <div class="detail-features">
+          <h2>Property Features</h2>
+          <div class="detail-features-grid">
+            <div class="detail-feature-col">
+              <h3>Interior</h3>
+              <ul>${(listing.features?.interior || []).map(f => `<li>${f}</li>`).join('')}</ul>
+              <h3 style="margin-top:1.25rem">Exterior</h3>
+              <ul>${(listing.features?.exterior || []).map(f => `<li>${f}</li>`).join('')}</ul>
+            </div>
+            <div class="detail-feature-col">
+              <h3>Lot</h3>
+              <ul>${(listing.features?.lot || []).map(f => `<li>${f}</li>`).join('')}</ul>
+              <h3 style="margin-top:1.25rem">Water</h3>
+              <ul>${(listing.features?.water || []).map(f => `<li>${f}</li>`).join('')}</ul>
+            </div>
+          </div>
+        </div>
+
+        <h2>The Neighborhood</h2>
+        <p>${listing.neighborhood || 'Neighborhood information coming soon.'}</p>
+
+        <div class="detail-map-placeholder">
+          <!-- Replace with Google Maps embed -->
+          <span>Interactive Map — ${listing.address}, ${listing.city}</span>
+        </div>
+      </div>
+
+      <div class="detail-sidebar">
+        <div class="agent-card">
+          <div class="agent-card-photo">
+            <div class="listing-photo-placeholder">
+              <!-- Replace with: <img src="branden-headshot.jpg" alt="Branden Waters"> -->
+            </div>
+          </div>
+          <div class="agent-card-name">${SITE_CONFIG.ownerName}</div>
+          <div class="agent-card-brokerage">Trevor Waters Realty</div>
+          <ul class="agent-card-contact">
+            <li>${SITE_CONFIG.phone}</li>
+            <li>${SITE_CONFIG.email}</li>
+          </ul>
+        </div>
+
+        <div class="showing-form">
+          <h3>Schedule a Showing</h3>
+          <form onsubmit="event.preventDefault(); alert('Showing request submitted! Branden will be in touch.');">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label>Phone</label>
+              <input type="tel" placeholder="(555) 555-5555">
+            </div>
+            <div class="form-group">
+              <label>Preferred Date</label>
+              <input type="date">
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea placeholder="I'd like to schedule a showing..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary" style="width:100%; justify-content:center;">Request Showing</button>
+          </form>
+        </div>
+
+        <p class="detail-mls-disclaimer">
+          <!-- PLACEHOLDER: Replace with actual MLS disclaimer -->
+          Information deemed reliable but not guaranteed. Listing data provided by Northeast Florida MLS. Buyer should verify all information independently.
+        </p>
+
+        <div class="detail-share">
+          <button class="detail-share-btn" onclick="navigator.clipboard.writeText(window.location.href); alert('Link copied!')" aria-label="Copy link">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </button>
+          <button class="detail-share-btn" onclick="window.location.href='mailto:?subject=Check out this listing&body=${listing.address}, ${listing.city} - ${listing.price}'" aria-label="Email listing">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Similar Listings -->
+    <div class="detail-similar">
+      <div class="detail-similar-inner">
+        <h2>You Might Also Like</h2>
+        <div class="detail-similar-grid">
+          ${similar.map(s => `
+            <div class="listing-card" onclick="openListingDetail('${s.id}')">
+              <div class="listing-card-photo">
+                <div class="listing-photo-placeholder"></div>
+                <span class="listing-card-badge" style="background: ${s.badgeColor || 'var(--color-green)'}">${s.badge}</span>
+              </div>
+              <div class="listing-card-body">
+                <div class="listing-card-address">${s.address}</div>
+                <div class="listing-card-stats">${s.beds ? s.beds + 'BR \u00b7 ' + s.baths + 'BA \u00b7 ' + s.sqft.toLocaleString() + ' sqft' : s.lotSize || ''}</div>
+                <div class="listing-card-price">${s.price}</div>
+              </div>
+              <span class="listing-card-hover-cta">View Details &rarr;</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer (simplified) -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-bottom" style="border-top:none; padding-top:0;">
+          <div class="footer-copyright">&copy; 2026 Branden Waters &middot; All rights reserved</div>
+          <div class="footer-bottom-links">
+            <a href="#">WaterwayInfo.com</a>
+            <a href="#">PermitPass.ai</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  `;
+
+  detail.classList.add('active');
+  mainSite.style.display = 'none';
+  detail.scrollTop = 0;
+  document.body.style.overflow = 'auto';
+}
+
+function closeListingDetail() {
+  const detail = document.getElementById('listingDetail');
+  const mainSite = document.getElementById('mainSite');
+  detail.classList.remove('active');
+  mainSite.style.display = '';
+}
+
+function selectDetailPhoto(thumbEl, index) {
+  document.querySelectorAll('.detail-gallery-thumb').forEach(t => t.classList.remove('active'));
+  thumbEl.classList.add('active');
+  // In production, swap the hero photo src based on the index
+}
+
+// Back button
+document.getElementById('detailBack').addEventListener('click', closeListingDetail);
+
+// ===== THEME TOGGLE =====
+function toggleTheme() {
+  const html = document.documentElement;
+  const current = html.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+
+  // Toggle icon visibility
+  const sunIcons = document.querySelectorAll('.icon-sun');
+  const moonIcons = document.querySelectorAll('.icon-moon');
+  sunIcons.forEach(el => el.style.display = next === 'dark' ? 'block' : 'none');
+  moonIcons.forEach(el => el.style.display = next === 'light' ? 'block' : 'none');
+
+  localStorage.setItem('theme', next);
+}
+
+document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+
+// Restore saved theme
+(function() {
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    document.documentElement.setAttribute('data-theme', saved);
+    document.querySelectorAll('.icon-sun').forEach(el => el.style.display = saved === 'dark' ? 'block' : 'none');
+    document.querySelectorAll('.icon-moon').forEach(el => el.style.display = saved === 'light' ? 'block' : 'none');
+  }
+})();
+
+// ===== NAVIGATION SCROLL EFFECT =====
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('siteNav');
+  if (window.scrollY > 50) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+}, { passive: true });
+
+// ===== MOBILE MENU =====
+document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+  document.getElementById('mobileNav').classList.add('active');
+});
+
+document.getElementById('mobileNavClose').addEventListener('click', closeMobileNav);
+
+function closeMobileNav() {
+  document.getElementById('mobileNav').classList.remove('active');
+}
+
+// ===== SCROLL REVEAL (IntersectionObserver) =====
+function initScrollReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+// ===== CONTACT FORM HANDLER =====
+function handleContactSubmit(e) {
+  e.preventDefault();
+  // In production, connect to form backend (Formspree, Netlify Forms, etc.)
+  alert('Thank you for reaching out! Branden will get back to you shortly.');
+  e.target.reset();
+}
+
+// ===== POPULATE CONFIG-DRIVEN FIELDS =====
+function populateConfigFields() {
+  const nameEl = document.getElementById('contactName');
+  if (nameEl) nameEl.textContent = SITE_CONFIG.ownerName;
+
+  const phoneEl = document.getElementById('contactPhone');
+  if (phoneEl) phoneEl.textContent = SITE_CONFIG.phone;
+
+  const emailEl = document.getElementById('contactEmail');
+  if (emailEl) emailEl.textContent = SITE_CONFIG.email;
+
+  const licenseEl = document.getElementById('contactLicense');
+  if (licenseEl) licenseEl.textContent = SITE_CONFIG.reLicense;
+
+  const footerLicense = document.getElementById('footerLicense');
+  if (footerLicense) footerLicense.textContent = SITE_CONFIG.reLicense;
+
+  const footerPhone = document.getElementById('footerPhone');
+  if (footerPhone) footerPhone.textContent = SITE_CONFIG.phone;
+
+  const footerEmail = document.getElementById('footerEmail');
+  if (footerEmail) footerEmail.textContent = SITE_CONFIG.email;
+}
+
+// ===== INITIALIZE =====
+document.addEventListener('DOMContentLoaded', () => {
+  initCarousel();
+  renderListingGrid();
+  renderVentures();
+  renderTestimonials();
+  renderRouting();
+  populateConfigFields();
+
+  // Delay scroll reveal init slightly to let DOM settle
+  requestAnimationFrame(() => {
+    initScrollReveal();
+  });
+});
+</script>
+</body>
+</html>
